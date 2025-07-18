@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <center>
+        <div class="login-container">
+        <p> Welcome. Please log in</p>
+        <h1>TumiTech Login Form</h1>
+
+        <form>
+            <label for="usernameInput">Username :  </label><input type="text" id="usernameInput"/></label>
+            <br>
+            <br>
+            <label for="passwordInput">Password :  </label><Input type="password" id="passwordInput"/>
+            <p id="message"></p>
+            <br>
+            <br>
+            <a href="#"onclick="verifyUser()">Log in</a>
+        </form>
+        </div>
+        </center>
+        <script>
+
+            function verifyUser(){
+                var username=document.getElementById("usernameInput").value;
+                var password=document.getElementById("passwordInput").value;
+
+                checkUserCreds(username, password);
+            }
+
+            function checkUserCreds(username, password){
+                var systemUsername = "Tumi"; 
+                var systemPassword = "1124";
+
+                if(username == systemUsername && password == systemPassword){
+                    document.getElementById("message").innerHTML ="Correct. Logging you in...";
+                } else {document.getElementById("message").innerHTML="Username or password are incorrect";
+
+                }
+            } 
+
+        </script>
+    </body>
+</html>
